@@ -1,0 +1,14 @@
+安装cryptopp库
+1.从github下载：https://github.com/weidai11/cryptopp
+2.编译安装：
+    make
+    make test
+    sudo make install
+
+Linkable-Ring-Signature环签名项目编译运行
+1.下载：https://github.com/apuljain/Linkable-Ring-Signature
+2.在include目录中的CommonFunctions.hpp中增加#include <cassert>
+3.进入src目录执行：
+g++ CommonFunctions.cpp LinkableRingSignProver.cpp LinkableRingSignVerifier.cpp main.cpp -I ../include -lcryptopp
+  
+./a.out

@@ -1,0 +1,226 @@
+内存泄露记录：
+==15976== 2,107 bytes in 2,107 blocks are indirectly lost in loss record 601 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x410BA9: void rapidjson::GenericReader<rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator>::ParseObject<0u, rapidjson::EncodedInputStream<rapidjson::UTF8<char>, rapidjson::MemoryStream>, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator> >(rapidjson::EncodedInputStream<rapidjson::UTF8<char>, rapidjson::MemoryStream>&, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x44ACCA: PoVTransaction::getData() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x441745: PoVBlock::getTransactionsList() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x441D28: PoVBlock::getRawBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41E02C: POV::Initial_GenerateBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F24E: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 2,208 bytes in 23 blocks are indirectly lost in loss record 602 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x44AB25: PoVTransaction::getData() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x441745: PoVBlock::getTransactionsList() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x441D28: PoVBlock::getRawBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41EC54: POV::Normal_GenerateBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F36A: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 2,584 bytes in 323 blocks are indirectly lost in loss record 605 of 906
+==15976==    at 0x4C2FB55: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x4E4F338: mbedtls_mpi_grow (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E4F595: mbedtls_mpi_copy (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E62311: mbedtls_ecp_copy (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E65333: ecp_precompute_comb (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E65B46: ecp_mul_comb (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E66F2D: mbedtls_ecp_mul (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E67393: mbedtls_ecp_mul_shortcuts (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E67419: mbedtls_ecp_muladd (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E617F0: mbedtls_ecdsa_verify (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x4E61D13: mbedtls_ecdsa_read_signature (in /usr/local/lib/libmbedcrypto.so.2.8.0)
+==15976==    by 0x42B130: KeyManager::verify(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+
+
+
+==15976== 4,192 bytes in 262 blocks are definitely lost in loss record 616 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x4442DB: PoVHeader::getRawData() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x441BC5: PoVBlock::getRawBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41E02C: POV::Initial_GenerateBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F24E: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 4,656 bytes in 291 blocks are definitely lost in loss record 622 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x4442DB: PoVHeader::getRawData() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x441BC5: PoVBlock::getRawBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41EC54: POV::Normal_GenerateBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F36A: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 34,623,234 (51,264 direct, 34,571,970 indirect) bytes in 534 blocks are definitely lost in loss record 900 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x4353A3: MessageManager::make_Request_Normal(unsigned int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41A6A1: POV::Normal_PublishTransaction() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F0C6: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+
+==15976== 16,102,067 (27,936 direct, 16,074,131 indirect) bytes in 291 blocks are definitely lost in loss record 878 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x42CE86: MessageManager::make_Message(unsigned int, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, MessageType, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x42EC4B: MessageManager::make_Message(unsigned long, MessageType, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x4339C9: MessageManager::make_Request_Block_Signature(unsigned long, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41EC72: POV::Normal_GenerateBlock() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F36A: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 12,096,605 (23,520 direct, 12,073,085 indirect) bytes in 245 blocks are definitely lost in loss record 873 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x42CE86: MessageManager::make_Message(unsigned int, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, MessageType, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x42EC4B: MessageManager::make_Message(unsigned long, MessageType, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x434DDD: MessageManager::make_Request_NodeID_By_Pubkey(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+
+
+
+
+==15976== 11,375,581 (23,616 direct, 11,351,965 indirect) bytes in 246 blocks are definitely lost in loss record 872 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x438B83: MessageManager::make_Request_Apply_Butler_Candidate_Signature(unsigned long, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x417D7B: POV::Initial_ApplyButlerCandidate() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F2F4: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 5,130,949 (12,432 direct, 5,118,517 indirect) bytes in 777 blocks are definitely lost in loss record 863 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x42D2ED: MessageManager::make_Message(unsigned int, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, MessageType, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x42EC4B: MessageManager::make_Message(unsigned long, MessageType, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x437F5E: MessageManager::make_Request_Commissioner_PublicKey(unsigned long) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F194: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 3,348,876 (3,952 direct, 3,344,924 indirect) bytes in 247 blocks are definitely lost in loss record 861 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x42D2ED: MessageManager::make_Message(unsigned int, unsigned long, unsigned long, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, MessageType, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x42EC4B: MessageManager::make_Message(unsigned long, MessageType, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x438CA7: MessageManager::make_Request_Apply_Butler_Candidate_Signature(unsigned long, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x417D7B: POV::Initial_ApplyButlerCandidate() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F2F4: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 1,182,564 (1,728 direct, 1,180,836 indirect) bytes in 18 blocks are definitely lost in loss record 838 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x42A325: DocumentContainer::getDocument() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41C7BE: POV::BallotStatistic(std::vector<DocumentContainer, std::allocator<DocumentContainer> >&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F57A: POV::validateVoteTransaction(rapidjson::GenericValue<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> >&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41FA17: POV::validateRawBlock(rapidjson::GenericValue<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> >&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x420A62: POV::handleMessage(rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x40B517: blockchain_network::OnReceiveMessage(char const*, int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+
+
+
+==15976== 790,419 (2,592 direct, 787,827 indirect) bytes in 27 blocks are definitely lost in loss record 824 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x432E10: MessageManager::make_Request_Vote(unsigned long, rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41A612: POV::Initial_Vote() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F230: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+
+
+
+==15976== 593,739 (2,592 direct, 591,147 indirect) bytes in 27 blocks are definitely lost in loss record 820 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x43CD97: AccountManager::getBallot(unsigned int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41A5FC: POV::Initial_Vote() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x41F230: POV::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x408C89: blockchain_network::run() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 593,191 (2,208 direct, 590,983 indirect) bytes in 23 blocks are definitely lost in loss record 819 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x4321E3: MessageManager::make_Response_Apply_Butler_Candidate_Signature(unsigned long, unsigned int, rapidjson::GenericValue<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> >&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x4205B1: POV::handleMessage(rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x40B517: blockchain_network::OnReceiveMessage(char const*, int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x4542CD: phxpaxos::MessageEvent::ReadDone(phxpaxos::BytesBuffer&, int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x454E6C: phxpaxos::MessageEvent::OnRead() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x44E398: phxpaxos::EventLoop::OneLoop(int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x44E73E: phxpaxos::EventLoop::StartLoop() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x428DA9: mmThreadRun(void*) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+==15976== 591,958 (1,344 direct, 590,614 indirect) bytes in 14 blocks are definitely lost in loss record 818 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x42FB02: MessageManager::make_Response_Apply_Commissioner_Signature(unsigned long, unsigned int, rapidjson::GenericValue<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator> >&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x420309: POV::handleMessage(rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x40B517: blockchain_network::OnReceiveMessage(char const*, int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x4542CD: phxpaxos::MessageEvent::ReadDone(phxpaxos::BytesBuffer&, int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x454E6C: phxpaxos::MessageEvent::OnRead() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x44E398: phxpaxos::EventLoop::OneLoop(int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x44E73E: phxpaxos::EventLoop::StartLoop() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x428DA9: mmThreadRun(void*) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+==15976==    by 0x596541C: clone (clone.S:109)
+
+
+
+
+==15976== 460,153 (864 direct, 459,289 indirect) bytes in 9 blocks are definitely lost in loss record 808 of 906
+==15976==    at 0x4C2E0EF: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==15976==    by 0x430735: MessageManager::get_Recommend_Letter_Metadata(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x431950: MessageManager::make_Response_Recommend_Letter(unsigned long, unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x420512: POV::handleMessage(rapidjson::GenericDocument<rapidjson::UTF8<char>, rapidjson::MemoryPoolAllocator<rapidjson::CrtAllocator>, rapidjson::CrtAllocator>&) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x40B517: blockchain_network::OnReceiveMessage(char const*, int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x4542CD: phxpaxos::MessageEvent::ReadDone(phxpaxos::BytesBuffer&, int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x454E6C: phxpaxos::MessageEvent::OnRead() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x44E398: phxpaxos::EventLoop::OneLoop(int) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x44E73E: phxpaxos::EventLoop::StartLoop() (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x428DA9: mmThreadRun(void*) (in /home/blackguess/workspace/C++/phxpaxos_test/Debug/phxpaxos_test)
+==15976==    by 0x537EC7F: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==15976==    by 0x50B06B9: start_thread (pthread_create.c:333)
+

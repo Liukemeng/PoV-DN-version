@@ -1,0 +1,31 @@
+# Tencent is pleased to support the open source community by making 
+# PhxPaxos available.
+# Copyright (C) 2016 THL A29 Limited, a Tencent company. 
+# All rights reserved.
+# 
+# Licensed under the BSD 3-Clause License (the "License"); you may 
+# not use this file except in compliance with the License. You may 
+# obtain a copy of the License at
+# 
+# https://opensource.org/licenses/BSD-3-Clause
+# 
+# Unless required by applicable law or agreed to in writing, software 
+# distributed under the License is distributed on an "AS IS" basis, 
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or 
+# implied. See the License for the specific language governing 
+# permissions and limitations under the License.
+# 
+# See the AUTHORS file for names of contributors. 
+
+allobject=libconsensus.a 
+
+CONSENSUS_OBJ=test.o blockchain-network.o DocumentContainer.o utils.o KeyManager.o MessageManager.o account.o AccountManager.o CallBackInstance.o PoVBlock.o PoVHeader.o PoVTransaction.o user.o PoVBlockChain.o ConfigHelper.o POV.o FISCO-BCOS-GR-Sig/devcore/SHA3.o FISCO-BCOS-GR-Sig/devcore/easylog.o FISCO-BCOS-GR-Sig/devcore/easylogging++.o  FISCO-BCOS-GR-Sig/algorithm/ring-sig/LinkableRingSig_Impl.o  FISCO-BCOS-GR-Sig/algorithm/bbs04/GroupSig_BBS.o FISCO-BCOS-GR-Sig/algorithm/bbs04/GroupSig_BBS_Impl.o  FISCO-BCOS-GR-Sig/algorithm/GroupSig.o FISCO-BCOS-GR-Sig/algorithm/KeyLoaderDumper.o FISCO-BCOS-GR-Sig/algorithm/RingSig.o
+
+CONSENSUS_LIB=consensus src/communicate:communicate src/utils:utils src/comm:comm src/config:config include:include src/communicate/tcp:communicate_tcp 
+
+CONSENSUS_SYS_LIB=-lmongocxx -lbsoncxx -lcryptopp -lboost_thread -lpbc -lpbc_sig -lpthread -lboost_system -lboost_filesystem -lgmp
+
+CONSENSUS_INCS=$(SRC_BASE_PATH)/src/consensus /usr/local/include/mongocxx/v_noabi /usr/local/include/bsoncxx/v_noabi $(SRC_BASE_PATH)/src/consensus/FISCO-BCOS-GR-Sig $(SRC_BASE_PATH)/src/consensus/FISCO-BCOS-GR-Sig/algorithm/bbs04 $(SRC_BASE_PATH)/src/consensus/FISCO-BCOS-GR-Sig/algorithm $(SRC_BASE_PATH)/src/consensus/FISCO-BCOS-GR-Sig/algorithm/ring-sig
+
+CONSENSUS_EXTRA_CPPFLAGS=-Wno-unused-variable -Wno-sign-compare -Wno-unused-but-set-variable -Wno-unused-result
+

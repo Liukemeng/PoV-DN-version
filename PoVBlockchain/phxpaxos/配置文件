@@ -1,0 +1,11 @@
+make clean&&./autoinstall.sh&&make&&make install
+
+
+
+
+
+valgrind --tool=memcheck --leak-check=yes --show-reachable=yes ./phxpaxos_test 
+
+valgrind ./phxpaxos_test 
+
+
